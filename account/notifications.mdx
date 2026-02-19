@@ -1,0 +1,70 @@
+---
+title: Notifications
+description: Configure how and when you receive notifications across in-app, email, and push channels.
+---
+
+Roadcase has a multi-channel notification system that keeps your team informed about changes without overwhelming them. You control exactly what notifications you receive and through which channels.
+
+## Notification channels
+
+| Channel | Description |
+|---|---|
+| **In-app inbox** | Notifications appear in your Roadcase inbox, accessible from the bell icon |
+| **Email** | Notifications are sent to your registered email address |
+| **Push** | Notifications are sent to your mobile device (iOS and Android) |
+
+## Notification types
+
+Roadcase sends notifications for these events:
+
+| Event | Description |
+|---|---|
+| **Event created** | A new event is added to the calendar |
+| **Event updated** | An event's details change (date, time, venue, etc.) |
+| **Event deleted** | An event is removed from the calendar |
+| **Schedule change** | A show's schedule items are updated |
+| **Venue change** | A show's venue is changed |
+| **Todo assigned** | A todo is assigned to you |
+| **Guest list request** | A new guest list request is submitted (admin only) |
+| **Invitation accepted** | A team invitation is accepted |
+
+## Configuring preferences
+
+You can control notifications at a granular level:
+
+1. Navigate to **Settings > Notifications**
+2. For each notification type, toggle which channels are active:
+   - In-app inbox: on/off
+   - Email: on/off
+   - Push: on/off
+
+### Per-artist preferences
+
+If you belong to multiple artists, you can configure notification preferences independently for each artist. This lets you stay closely informed about one artist while reducing noise from another.
+
+## Batched notifications
+
+Roadcase intelligently batches rapid changes to avoid notification overload. For example, if an administrator makes several quick edits to a show's schedule, you receive a single notification summarizing the changes rather than one notification per edit.
+
+The batching window is short enough that you stay informed in near real-time, but long enough to collapse rapid successive edits.
+
+## Push notifications
+
+To receive push notifications on your mobile device:
+
+1. Install the Roadcase [mobile app](/account/mobile-app)
+2. Sign in to your account
+3. Grant notification permissions when prompted
+4. Your device is automatically registered for push notifications
+
+Push notifications are delivered via Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android.
+
+### Managing push devices
+
+You can have push notifications active on multiple devices simultaneously. Each device is registered independently and can be managed from your notification settings.
+
+## Email notifications
+
+Email notifications are sent from Roadcase to your registered email address. They are delivered reliably and include enough context that you can understand the change without opening the app.
+
+To reduce email volume, adjust your per-notification-type preferences to disable email for lower-priority events.

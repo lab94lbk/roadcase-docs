@@ -1,68 +1,95 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Roadcase",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2541FF",
+    "light": "#6974FE",
+    "dark": "#2541FF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "plans-and-pricing"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Concepts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "core-concepts/artists-and-teams",
+              "core-concepts/roles-and-permissions",
+              "core-concepts/calendar-and-events",
+              "core-concepts/organizations",
+              "core-concepts/custom-event-types"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Tour Planning",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "tour-planning/shows",
+              "tour-planning/venues"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Show Operations",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "show-operations/show-schedule",
+              "show-operations/deals",
+              "show-operations/settlements",
+              "show-operations/advances",
+              "show-operations/stage-plots",
+              "show-operations/riders",
+              "show-operations/guest-lists",
+              "show-operations/event-attendance"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Music & Performance",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "music/songs",
+              "music/setlists"
+            ]
+          },
+          {
+            "group": "Productivity",
+            "pages": [
+              "productivity/todos",
+              "productivity/projects",
+              "productivity/documents",
+              "productivity/expenses"
+            ]
+          },
+          {
+            "group": "Marketing",
+            "pages": [
+              "marketing/epk"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "pages": [
+              "account/dashboard",
+              "account/notifications",
+              "account/billing",
+              "account/mobile-app",
+              "account/referrals"
+            ]
+          },
+          {
+            "group": "Workflow Guides",
+            "pages": [
+              "guides/planning-your-first-tour",
+              "guides/advancing-a-show",
+              "guides/settling-a-show",
+              "guides/availability-and-conflicts"
             ]
           }
         ]
@@ -71,14 +98,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "App",
+          "href": "https://app.roadcase.com",
+          "icon": "rocket"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "mailto:support@roadcase.com",
+          "icon": "life-ring"
         }
       ]
     }
@@ -91,32 +118,19 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@roadcase.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Roadcase",
+      "href": "https://app.roadcase.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/roadaborad",
+      "instagram": "https://instagram.com/roadcase"
     }
   }
 }

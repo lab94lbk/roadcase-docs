@@ -1,0 +1,103 @@
+---
+title: Shows
+description: Create and manage your shows — the core of your touring schedule.
+---
+
+Shows are the primary event type in Roadcase. A show represents a performance at a venue and is the most feature-rich event type, supporting schedules, deals, settlements, guest lists, advances, stage plots, riders, and more.
+
+## Creating a show
+
+To create a show:
+
+1. Click **New event** on the calendar
+2. Select **Show** as the event type
+3. Fill in the details:
+
+| Field | Description |
+|---|---|
+| **Title** | The name of the show (e.g., "Spring Tour - Chicago") |
+| **Date & time** | When the show takes place |
+| **Venue** | The venue where the show is held (search or create new) |
+| **Confirmed** | Whether the show is confirmed or still a hold |
+| **Notes** | Rich-text notes about the show |
+
+4. Click **Save**
+
+## Confirmation status
+
+Shows can be either **confirmed** or **unconfirmed** (hold). This distinction is important during the booking process:
+
+- **Unconfirmed** shows appear on the calendar with a visual indicator (e.g., dashed border) so your team knows the date is not locked in yet.
+- **Confirmed** shows are solid bookings.
+
+Toggle confirmation status at any time from the show detail page.
+
+## Show details
+
+Once created, a show has several sections you can populate:
+
+<CardGroup cols={2}>
+  <Card title="Schedule" icon="clock" href="/show-operations/show-schedule">
+    Build a timeline of soundcheck, doors, sets, and other schedule items.
+  </Card>
+  <Card title="Deal" icon="handshake" href="/show-operations/deals">
+    Track the financial deal structure (guarantee, versus, door deal, etc.).
+  </Card>
+  <Card title="Settlement" icon="money-bill" href="/show-operations/settlements">
+    Run a settlement after the show to calculate payouts.
+  </Card>
+  <Card title="Guest list" icon="clipboard-list" href="/show-operations/guest-lists">
+    Manage guest list requests and approvals.
+  </Card>
+  <Card title="Advance" icon="paper-plane" href="/show-operations/advances">
+    Share technical requirements and logistics with the venue.
+  </Card>
+  <Card title="Setlist" icon="list-ol" href="/music/setlists">
+    Assign a setlist to this show.
+  </Card>
+  <Card title="Attendance" icon="users" href="/show-operations/event-attendance">
+    Track which road crew members are attending.
+  </Card>
+  <Card title="Expenses" icon="receipt" href="/productivity/expenses">
+    Log expenses associated with this show.
+  </Card>
+</CardGroup>
+
+## Billings
+
+When multiple artists perform at the same show, you can set up **billings** to define the performance order. Each billing entry includes:
+
+- The performing artist
+- Their billing position (headliner, direct support, opener, etc.)
+
+The billing order determines how artists appear on the show schedule and any generated documents.
+
+## Venue association
+
+Every show can be linked to a venue. When you assign a venue, Roadcase automatically pulls in the venue's address, capacity, contacts, and photos.
+
+If the venue does not exist in your database yet, you can create one inline. See [Venues](/tour-planning/venues) for details.
+
+## Show documents
+
+You can attach documents directly to a show for easy access. Common documents include:
+
+- Contracts and riders
+- Parking and load-in instructions
+- Local production contacts
+- Day-of logistics notes
+
+Documents attached to a show can be marked as admin-only to restrict visibility to administrators.
+
+## Deleting a show
+
+Administrators can delete a show from the show detail page. Deleting a show removes:
+
+- The show and its schedule items
+- Guest list entries
+- Associated deal and settlement data
+- Advance shares
+
+<Warning>
+  Deleting a show is permanent and cannot be undone. Documents and expenses linked to the show are preserved independently.
+</Warning>

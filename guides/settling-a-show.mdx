@@ -1,0 +1,122 @@
+---
+title: Settling a show
+description: A step-by-step walkthrough of the financial settlement process after a show.
+---
+
+<Snippet file="pro-badge.mdx" />
+
+Settlement is what happens after the show is over. It is the process of sitting down (usually with the promoter or venue) to calculate the final payout based on the agreed deal terms and actual revenue. This guide walks you through the full settlement workflow in Roadcase.
+
+## Before settlement
+
+To settle a show, you need:
+
+1. A [deal](/show-operations/deals) already set up on the show with the agreed terms
+2. The actual revenue numbers (ticket sales, merch totals) — typically provided by the venue or promoter night-of
+3. The actual expense amounts
+
+If you have not entered the deal yet, do that first. See [Deals](/show-operations/deals) for setup instructions.
+
+## Step 1: Designate a settlement delegate (optional)
+
+If someone specific on your team handles settlements at the venue (usually the tour manager), designate them as the **settlement delegate** on the show. This is informational — it tells the team who is responsible for handling the money.
+
+## Step 2: Enter revenue numbers
+
+After the show, open it in Roadcase and navigate to the **Settlement** tab.
+
+Enter the actual revenue:
+
+| Field | What to enter |
+|---|---|
+| **Gross revenue** | Total ticket sales before any deductions |
+| **Tax** | Tax amount deducted (if applicable) |
+| **Facility fee** | Venue facility fees deducted (if applicable) |
+
+Roadcase automatically calculates **net revenue** = gross - tax - facility fee.
+
+## Step 3: Review expenses
+
+The settlement pulls in deal expenses that were entered when you [set up the deal](/show-operations/deals). Review them and update if the actual amounts differ from the estimates:
+
+- Verify each expense amount
+- Confirm who paid each expense (promoter or artist)
+- Add any additional expenses that came up
+
+## Step 4: Enter merch numbers
+
+If you sold merchandise, enter:
+
+| Field | What to enter |
+|---|---|
+| **Merch gross** | Total merchandise sales |
+| **Merch fee** | The venue's merch cut (percentage from the deal) — auto-calculated |
+| **Merch net** | Merch gross minus merch fee — auto-calculated |
+
+## Step 5: Review the calculated payout
+
+Roadcase computes the full settlement based on the deal structure:
+
+### For a guarantee deal
+
+```
+Artist earnings = Guarantee amount
+Total payout = Guarantee + Merch net - Deposit - Artist expenses
+```
+
+### For a versus deal
+
+```
+Percentage share = Net revenue x Percentage
+Artist earnings = Higher of (Guarantee, Percentage share)
+Total payout = Artist earnings + Merch net - Deposit - Artist expenses
+```
+
+### For a plus deal
+
+```
+Artist earnings = Guarantee + MAX(0, Net revenue - Threshold) x Percentage
+Total payout = Artist earnings + Merch net - Deposit - Artist expenses
+```
+
+Review these numbers carefully. The settlement page shows a clear breakdown so you and the promoter can agree on the math.
+
+## Step 6: Finalize the settlement
+
+When both parties agree on the numbers, click **Finalize**. This:
+
+- Locks the settlement — no further edits are possible
+- Timestamps the finalization for your records
+- Marks the deal status as "settled"
+
+<Warning>
+  Finalizing is permanent. Double-check every number before clicking finalize. If you discover an error after finalizing, you will need to note it separately.
+</Warning>
+
+## Step 7: Export the settlement PDF
+
+Click **Export PDF** to generate a professional settlement document. The PDF includes:
+
+- Show details (date, venue, artist)
+- Deal terms summary
+- Revenue breakdown (gross, tax, facility fee, net)
+- Expense breakdown (with paid-by designation)
+- Merch breakdown
+- Deposit deduction
+- Final payout amount
+- Artist logo
+
+Use the PDF for:
+
+- Your own financial records
+- Sending to management or accounting
+- Sharing with the promoter as a receipt
+- Tax documentation
+
+## Tips
+
+- **Settle night-of** whenever possible. Numbers are freshest and the promoter's team is available to confirm
+- **Bring the numbers up on your phone** using the [mobile app](/account/mobile-app) to reference deal terms during the settlement conversation
+- **Pre-enter the deal accurately** so settlement is just filling in the actual revenue
+- **Keep deposit records current** — mark deposits as received when they come in so the settlement deduction is accurate
+- **Take photos of the settlement sheet** if the venue provides a paper copy, and upload it as a [document](/productivity/documents) on the show

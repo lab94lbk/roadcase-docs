@@ -1,0 +1,115 @@
+---
+title: Settlements
+description: Calculate final payouts after a show based on the deal structure.
+---
+
+<Snippet file="pro-badge.mdx" />
+
+Settlement is the process of calculating the final payout after a show. In Roadcase, settlements use the [deal structure](/show-operations/deals) you set up and the actual revenue numbers to compute what you are owed.
+
+## How settlements work
+
+A settlement takes:
+
+1. **The deal terms** — your agreed-upon deal type, guarantee, percentages, etc.
+2. **Actual revenue** — what the show actually brought in
+3. **Actual expenses** — what was spent on production, staffing, etc.
+4. **Merchandise numbers** — merch gross, fees, and net
+
+And computes:
+
+- Artist earnings based on the deal structure
+- Merch payout after any venue cut
+- Total payout after deposits and artist-paid expenses
+
+## Running a settlement
+
+To settle a show:
+
+1. Open the show from the calendar
+2. Navigate to the **Settlement** tab
+3. Enter the actual numbers:
+
+| Field | Description |
+|---|---|
+| **Gross revenue** | Total ticket revenue |
+| **Tax** | Tax amount deducted from gross |
+| **Facility fee** | Facility or venue fees deducted from gross |
+| **Net revenue** | Automatically calculated: gross - tax - facility fee |
+| **Deal expenses** | Actual expenses (pulled from the deal, editable) |
+
+4. Review the calculated earnings:
+
+| Calculation | Description |
+|---|---|
+| **Artist earnings** | Computed based on the deal type and actual revenue |
+| **Merch gross** | Total merchandise sales |
+| **Merch fee** | Venue's merch cut (percentage from the deal) |
+| **Merch net** | Merch gross minus merch fee |
+| **Deposit** | Amount already paid as deposit |
+| **Artist expenses** | Expenses paid by the artist |
+| **Total payout** | Artist earnings + merch net - deposit - artist expenses |
+
+5. When everything looks right, **finalize** the settlement
+
+## Settlement calculations by deal type
+
+### Guarantee
+
+```
+Artist earnings = Guarantee amount
+```
+
+### Versus
+
+```
+Percentage share = Net revenue × Percentage
+Artist earnings = MAX(Guarantee, Percentage share)
+```
+
+### Door deal
+
+```
+Artist earnings = Door revenue × Percentage
+```
+
+### Plus
+
+```
+Base = Guarantee
+Bonus = MAX(0, Net revenue - Threshold) × Percentage
+Artist earnings = Base + Bonus
+```
+
+### Percentage
+
+```
+Artist earnings = Revenue × Percentage
+```
+
+(Revenue is gross or net depending on the deal's percentage basis.)
+
+## Finalizing a settlement
+
+When you finalize a settlement, it is locked and timestamped. This creates an official record of the financial outcome of the show.
+
+<Warning>
+  Once finalized, a settlement cannot be edited. Make sure all numbers are correct before finalizing.
+</Warning>
+
+## Settlement delegate
+
+You can designate a team member as the **settlement delegate** for a show. This is typically the tour manager or band leader who handles the financial settlement at the venue on the night of the show.
+
+## Exporting settlements
+
+Settlements can be exported as a **PDF** for your records or to share with promoters, management, or accountants. The PDF includes:
+
+- Show details (date, venue, artist)
+- Deal terms
+- Revenue breakdown
+- Expense breakdown
+- Payout calculation
+- Artist logo (if uploaded)
+
+Navigate to the settlement and click **Export PDF** to generate the document.

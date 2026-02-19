@@ -1,19 +1,11 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.06145 23.1079C5.26816 22.3769 -3.39077 20.6274 1.4173 5.06384C9.6344 6.09939 16.9728 14.0644 9.06145 23.1079Z" fill="url(#paint0_linear_17557_2021)"/>
-<path d="M8.91928 23.0939C5.27642 21.2223 0.78371 4.20891 17.0071 0C20.7569 7.19341 19.6212 16.5452 8.91928 23.0939Z" fill="url(#paint1_linear_17557_2021)"/>
-<path d="M8.91388 23.0788C8.73534 19.8817 10.1585 9.08525 23.5699 13.1107C23.1812 20.1229 18.984 26.4182 8.91388 23.0788Z" fill="url(#paint2_linear_17557_2021)"/>
-<defs>
-<linearGradient id="paint0_linear_17557_2021" x1="3.77557" y1="5.91571" x2="5.23185" y2="21.5589" gradientUnits="userSpaceOnUse">
-<stop stop-color="#18E299"/>
-<stop offset="1" stop-color="#15803D"/>
-</linearGradient>
-<linearGradient id="paint1_linear_17557_2021" x1="12.1711" y1="-0.718425" x2="10.1897" y2="22.9832" gradientUnits="userSpaceOnUse">
-<stop stop-color="#16A34A"/>
-<stop offset="1" stop-color="#4ADE80"/>
-</linearGradient>
-<linearGradient id="paint2_linear_17557_2021" x1="23.1327" y1="15.353" x2="9.33841" y2="18.5196" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4ADE80"/>
-<stop offset="1" stop-color="#0D9373"/>
-</linearGradient>
-</defs>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-232.16, -60.24) scale(0.68)">
+    <path d="M412 464.657C412 600.313 522.968 711.281 658.633 711.281H708.111L666.656 637.613H658.633C563.64 637.613 485.676 559.649 485.676 464.657V291.676H777.031C872.032 291.676 949.996 369.632 949.996 464.633V637.613H920.149L961.873 711.281H1018.73C1021.45 711.281 1023.66 709.081 1023.66 706.36V464.633C1023.66 328.977 912.695 218 777.031 218H416.922C414.208 218 412 220.208 412 222.922V464.657ZM880.229 712.128L801.885 573.813C846.236 560.963 878.9 519.888 878.9 471.541C878.9 413.01 831.004 365.114 772.465 365.114H555.545V439.106H772.465C790.158 439.106 804.9 453.848 804.9 471.541C804.9 489.242 790.158 503.983 772.465 503.983H678.494L685.726 516.904H685.014L794.858 712.128H880.229Z" fill="url(#favicon_gradient)"/>
+  </g>
+  <defs>
+    <linearGradient id="favicon_gradient" x1="283.122" y1="785.447" x2="1004.65" y2="376.517" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3C51AB"/>
+      <stop offset="1" stop-color="#8A61B7"/>
+    </linearGradient>
+  </defs>
 </svg>
