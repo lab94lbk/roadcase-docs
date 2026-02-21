@@ -74,6 +74,13 @@
             ]
           },
           {
+            "group": "Integrations",
+            "pages": [
+              "integrations/index",
+              "integrations/google-calendar-sync"
+            ]
+          },
+          {
             "group": "Account & Settings",
             "pages": [
               "account/dashboard",
