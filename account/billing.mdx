@@ -1,67 +1,75 @@
 ---
 title: Billing
-description: Manage your subscription, payment method, and plan changes.
+description: Manage your subscription, billing interval, and payment details.
 ---
 
-Roadcase billing is managed through Stripe. You can view your current plan, upgrade or downgrade, and manage your payment method from the billing settings.
+Roadcase billing is managed through Stripe. Each artist has its own subscription, and billing settings live under your artist's management page.
 
 ## Viewing your plan
 
 Navigate to **Settings > Billing** to see:
 
 - Your current plan (Basic or Pro)
-- Billing cycle and next payment date
-- Payment method on file
+- Billing interval (monthly or annual)
+- Next billing date
+- Who manages billing for this artist
 
-## Subscribing
+## Free trial
 
-After your [14-day free trial](/plans-and-pricing), choose the plan that fits your needs:
+Every new artist starts with a **14-day free trial** with full Pro access. No credit card is required. The trial banner on the billing page shows when your trial expires and lets you pick a plan before it ends.
 
-| Plan | Price | Includes |
+During the trial, you can explore every feature. When the trial ends, select a plan to continue.
+
+## Choosing a plan
+
+The plan picker appears during your trial, after cancellation, or during the grace period. It shows both plans side-by-side:
+
+| Plan | Monthly | Annual |
 |---|---|---|
-| **Basic** | $10/month | Core features — calendar, shows, team, guest lists, todos, songs, setlists, documents, expenses |
-| **Pro** | $40/month | Everything in Basic + deals, settlements, advances, stage plots, riders, projects, EPK, organizations |
+| **Basic** | $10/month per artist | $100/year per artist |
+| **Pro** | $40/month per artist | $400/year per artist |
+
+Use the **Monthly / Annual** toggle to switch between billing intervals. Annual billing saves you money — the annual savings are shown on each plan card.
 
 See [Plans & pricing](/plans-and-pricing) for a full feature comparison.
 
+When you click a plan, you are taken to Stripe Checkout to enter your payment details. Promotion codes are accepted at checkout.
+
 ## Upgrading
 
-To upgrade from Basic to Pro:
+If you are on Basic and want to upgrade to Pro:
 
 1. Go to **Settings > Billing**
-2. Click **Upgrade to Pro**
-3. Confirm your payment method
+2. Click **Upgrade to Pro** on the upgrade card
+3. Complete the Stripe Checkout flow
 4. Pro features are unlocked immediately
 
-You are charged the prorated difference for the remainder of your current billing cycle.
+The price difference is prorated for the remainder of your current billing cycle.
 
-## Downgrading
+## Managing payment methods and invoices
 
-To downgrade from Pro to Basic:
+Click **Manage payment methods & invoices** to open the Stripe billing portal. From there you can:
+
+- Update your credit card or payment method
+- View and download past invoices
+- Update billing information
+
+Your card details are handled entirely by Stripe and are never stored on Roadcase servers.
+
+## Cancellation
+
+To cancel your subscription:
 
 1. Go to **Settings > Billing**
-2. Click **Change plan**
-3. Select Basic
-4. Confirm
+2. Click **Cancel subscription**
+3. Confirm in the dialog
 
-The downgrade takes effect at the **end of your current billing period**. You retain Pro access until then.
+After cancellation, you retain full access for a **7-day grace period**. During this window, you can resume your subscription at any time without losing data.
 
-When your plan switches to Basic:
+After the grace period, your artist's data is preserved but access is restricted until you resubscribe.
 
-- Pro-only features become read-only
-- Your existing Pro data (deals, settlements, advances, stage plots, riders, projects, EPK) is preserved
-- You cannot create new Pro content until you upgrade again
+## Billing permissions
 
-## Payment method
+Only **administrators** and the designated billing user can manage billing. Other team members can view the billing page but cannot make changes.
 
-Update your credit card or payment method from the billing settings page. Roadcase uses Stripe for secure payment processing — your card details are never stored on Roadcase servers.
-
-## Grace period
-
-If your subscription lapses (payment fails, card expires, etc.), there is a **7-day grace period** during which your account continues to function normally. This gives you time to update your payment method without disruption.
-
-After the grace period, your account reverts to a limited state until payment is resolved.
-
-## Invoices
-
-Invoices are available in the billing section. Each billing cycle generates an invoice that you can view or download for your records.
+If your artist belongs to an [organization](/core-concepts/organizations), organization members can also access billing when no dedicated billing user is set.
