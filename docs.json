@@ -92,7 +92,6 @@
             "group": "Integrations",
             "pages": [
               "integrations/index",
-              "integrations/google-calendar-sync",
               "integrations/ical-feeds",
               "integrations/bandsintown"
             ]
