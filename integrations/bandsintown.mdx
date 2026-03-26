@@ -1,61 +1,70 @@
 ---
 title: Bandsintown
-description: Import and sync your show dates with Bandsintown to keep fans informed.
+description: Import your upcoming events from Bandsintown into Roadcase.
 icon: music
 ---
 
 <Snippet file="pro-badge.mdx" />
 
-Roadcase integrates with Bandsintown so you can manage your shows in one place and keep your public-facing tour dates up to date. Import existing Bandsintown events into Roadcase, or sync your Roadcase shows out to Bandsintown — either way, you avoid double-entry and reduce the chance of mismatched dates.
+If you already have events listed on Bandsintown, Roadcase can import them directly into your calendar. This saves you from manually re-entering show dates, venue details, and locations that already exist on another platform.
 
-## Importing from Bandsintown
+## Connecting to Bandsintown
 
-If you already have shows listed on Bandsintown, you can pull them into Roadcase:
+To import events, you need a Bandsintown API key. Roadcase uses this key to access your artist's public event listings through the Bandsintown API.
 
 <Steps>
-  <Step title="Connect your Bandsintown account">
-    Navigate to **Settings > Integrations** and connect your Bandsintown artist profile.
+  <Step title="Navigate to settings">
+    Go to **Settings > Integrations** for the artist you want to connect.
   </Step>
-  <Step title="Review available events">
-    Roadcase fetches your upcoming Bandsintown events and displays them for review.
+  <Step title="Enter your API key">
+    Paste your Bandsintown API key into the field provided.
   </Step>
-  <Step title="Import events">
-    Select the events you want to import. Roadcase creates show events on your calendar with the venue, date, and time pre-filled from Bandsintown.
+  <Step title="Validate the connection">
+    Click **Validate**. Roadcase will look up your artist on Bandsintown to confirm the key works and the correct artist is matched.
   </Step>
 </Steps>
 
-Imported events become full Roadcase shows, so you can add schedules, deals, advances, guest lists, and everything else.
+## Artist validation
 
-## Syncing to Bandsintown
-
-When you create or update shows in Roadcase, synced shows are pushed to your Bandsintown artist page. This means your fans always see accurate tour dates without you needing to update Bandsintown separately.
-
-| What syncs | Details |
-|---|---|
-| **New shows** | Confirmed shows are pushed to Bandsintown |
-| **Date and time changes** | Updated automatically |
-| **Venue changes** | Updated automatically |
-| **Cancellations** | Removed from Bandsintown |
+Roadcase automatically matches your artist by name and Bandsintown URL. If the automatic match does not find the right artist — for example, if multiple artists share a similar name — you can provide your Bandsintown artist ID directly. This ensures the correct artist profile is linked before any events are imported.
 
 <Note>
-  Only show events sync to Bandsintown. Other event types (rehearsals, meetings, travel, etc.) are not published to your public Bandsintown profile.
+  You can find your Bandsintown artist ID in the URL of your Bandsintown artist page or in your Bandsintown for Artists dashboard.
 </Note>
+
+## Previewing events before import
+
+Before importing anything, Roadcase shows you a preview of all upcoming events found on Bandsintown. The preview displays:
+
+| Column | Description |
+|---|---|
+| **Date** | The event date |
+| **Title** | The event or venue name |
+| **Venue** | Venue name and city |
+| **Status** | Whether the event can be imported or already exists in Roadcase |
+
+Events that match an existing show in Roadcase — by venue name and date, or by a previous import — are flagged as already existing and skipped automatically. You can review the full list before choosing which events to import.
+
+## Importing events
+
+Select the events you want to import and click **Import**. Roadcase creates a show for each selected event, along with the associated venue if it does not already exist. Venue details including name, city, state, country, and coordinates are carried over from Bandsintown.
+
+Imported events become full Roadcase shows, so you can add [schedules](/show-operations/show-schedule), [deals](/show-operations/deals), [advances](/show-operations/advances), [guest lists](/show-operations/guest-lists), and everything else. Events that were previously imported or that match existing shows are skipped to prevent duplicates.
+
+## Continuous sync
+
+After your initial import, Roadcase can automatically sync new events from Bandsintown on an ongoing basis. When continuous sync is enabled, Roadcase periodically checks for new upcoming events on your Bandsintown profile and imports any that do not already exist in your calendar.
+
+This means you can continue managing your public-facing event listings on Bandsintown while Roadcase stays up to date without manual intervention.
+
+<Tip>
+  Connect Bandsintown early when setting up your artist in Roadcase. Importing your existing shows saves time compared to entering them manually.
+</Tip>
 
 ## Venue matching
 
-When importing events, Roadcase attempts to match Bandsintown venues with venues already in your Roadcase account. If a match is found, the imported show is automatically linked to your existing venue record. If no match is found, Roadcase creates a new venue from the Bandsintown data.
+When importing events, Roadcase attempts to match Bandsintown venues with venues already in your Roadcase account. If a match is found, the imported show is automatically linked to your existing venue record — preserving any contacts, notes, or history you have already built up. If no match is found, Roadcase creates a new venue from the Bandsintown data.
 
-## Managing the connection
-
-You can manage your Bandsintown integration from **Settings > Integrations**:
-
-- **Enable or disable sync** — Pause syncing without disconnecting
-- **Disconnect** — Remove the Bandsintown connection entirely
-
-<Tip>
-  Connect Bandsintown early when setting up your artist in Roadcase. Importing your existing shows saves time compared to re-entering them manually.
-</Tip>
-
-## Why use both platforms
-
-Roadcase is your internal tour management tool — it handles the operational side of touring that your team needs. Bandsintown is your public-facing event listing that fans use to discover and track your shows. The integration bridges the two so your internal planning and public listings stay in sync without extra work.
+<Note>
+  Bandsintown import is one-way — events flow from Bandsintown into Roadcase. Changes you make to an event in Roadcase after import (such as updating the time or adding deal details) are not pushed back to Bandsintown.
+</Note>

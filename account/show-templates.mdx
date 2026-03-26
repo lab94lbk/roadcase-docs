@@ -1,59 +1,75 @@
 ---
 title: Show templates
-description: Create reusable todo and advance templates to streamline your show preparation workflow.
-icon: copy
+description: Create reusable todo checklists and advance packages to apply to new shows.
+icon: clone
 ---
 
 <Snippet file="pro-badge.mdx" />
 
-Every show requires a similar set of tasks and advance materials. Instead of building these from scratch each time, Roadcase lets you create templates that you can apply to any show with one click. There are two types of templates: **todo templates** for task checklists and **advance templates** for technical and hospitality packages.
+Every show requires a similar set of tasks and advance materials. Instead of building these from scratch each time, Roadcase lets you create templates that you can apply to any event with one click. There are two types of templates: **todo templates** for task checklists and **advance templates** for technical and hospitality packages.
 
 ## Todo templates
 
-A todo template is a reusable checklist of tasks that you apply to shows. When applied, each task in the template becomes a [todo](/productivity/todos) scoped to that show.
+A todo template is a reusable checklist of tasks that you apply to shows and other events. When applied, each task in the template becomes a [todo](/productivity/todos) scoped to that event, with due dates calculated automatically from the event's date.
 
 ### Creating a todo template
 
-1. Navigate to **Settings > Show templates**
+1. Navigate to **Settings > Todo templates**
 2. Click **New todo template**
 3. Give the template a name (e.g., "Standard show prep" or "Festival checklist")
-4. Add tasks to the template, each with:
+4. Add items to the checklist, each with:
 
 | Field | Description |
 |---|---|
 | **Title** | What needs to be done |
-| **Assignee** | The default team member responsible (optional) |
-| **Due offset** | How many days before the show this task should be due (optional) |
+| **Due offset** | How many days before (or after) the event this task should be due |
 
 5. Save the template
 
+### Due date offsets
+
+Each item in a todo template can have a due date offset expressed in days relative to the event date:
+
+| Offset | Meaning |
+|---|---|
+| **-30** | Due 30 days before the event |
+| **-7** | Due 1 week before the event |
+| **0** | Due on the day of the event |
+| **1** | Due 1 day after the event |
+
+This lets you build checklists where tasks like "Send advance to venue" are due weeks before the show, while "Submit settlement" is due the day after.
+
 ### Applying a todo template
 
-When viewing a show:
+When viewing an event:
 
 1. Navigate to the **Todos** tab
 2. Click **Apply template**
 3. Select the template
-4. Roadcase creates individual todos for each task in the template, scoped to the show
+4. Roadcase creates individual todos for each task, scoped to the event
 
-Due dates are automatically calculated based on the show date and each task's due offset. For example, a task with a 14-day offset applied to a show on March 30 gets a due date of March 16.
+Due dates are automatically calculated based on the event date and each task's offset. For example, a task with a -14 day offset applied to a show on March 30 gets a due date of March 16.
+
+### Automatic application
+
+Todo templates can be set to apply automatically to new events of specific types. When a template's application mode is set to **automatic**, Roadcase creates the todos as soon as a matching event is added to the calendar. You can configure which event types trigger automatic application — shows, meetings, rehearsals, travel, or any combination.
 
 <Tip>
-  Create separate templates for different show types. A club show, a festival appearance, and a support slot each have different preparation needs. Having dedicated templates ensures nothing falls through the cracks.
+  Use automatic templates for your most common workflows. A "Show day checklist" that auto-applies to all new shows ensures your team gets a consistent set of tasks without anyone having to remember to apply the template manually.
 </Tip>
 
 ### Example todo template
 
 A typical "Standard show prep" template might include:
 
-| Task | Due offset | Assignee |
-|---|---|---|
-| Send advance to venue | 21 days before | Tour Manager |
-| Confirm backline rental | 14 days before | Tour Manager |
-| Submit guest list requests | 7 days before | — |
-| Finalize guest list | 3 days before | Tour Manager |
-| Confirm load-in time | 3 days before | Tour Manager |
-| Print day sheets | 1 day before | Tour Manager |
+| Task | Due offset |
+|---|---|
+| Send advance to venue | 21 days before |
+| Confirm backline rental | 14 days before |
+| Submit guest list requests | 7 days before |
+| Finalize guest list | 3 days before |
+| Confirm load-in time | 3 days before |
+| Print day sheets | 1 day before |
 
 ## Advance templates
 
@@ -82,8 +98,10 @@ You can then customize the show-specific advance without affecting the original 
   Applying a template copies the content at that point in time. If you later update the template, shows that already had it applied are not affected. Apply the updated template to new shows going forward.
 </Note>
 
+## Organization-level templates
+
+If your artist belongs to an [organization](/core-concepts/organizations), todo templates can be scoped at the organization level. Organization templates are shared across all artists in the organization, which is useful when multiple acts follow the same operational workflows. Artist-level templates remain specific to a single artist.
+
 ## Managing templates
 
-All templates are managed from **Settings > Show templates** (for todo templates) and **Advances > Templates** (for advance templates). You can edit, duplicate, or delete templates at any time.
-
-Templates are scoped to individual artists, so each act can have its own set of templates tailored to its workflow.
+All templates are managed from **Settings > Todo templates** (for todo templates) and **Advances > Templates** (for advance templates). Administrators can edit, duplicate, or delete templates at any time. Templates are scoped per artist, so each act can have its own set tailored to its workflow.

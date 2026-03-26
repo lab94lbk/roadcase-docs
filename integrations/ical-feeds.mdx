@@ -1,30 +1,28 @@
 ---
 title: iCal feeds
-description: Subscribe to your Roadcase calendar from any app that supports iCal feeds.
+description: Subscribe to your Roadcase calendar from any calendar app using iCal feeds.
 icon: rss
 ---
 
-Roadcase provides iCal calendar feeds that let you subscribe to your events from any calendar application that supports the iCal standard — Apple Calendar, Outlook, Google Calendar, and many others. This gives you a read-only view of your Roadcase events alongside your personal calendar.
+Roadcase provides iCal feeds that let you subscribe to your artist's calendar from any app that supports the iCal standard — Apple Calendar, Google Calendar, Outlook, and more. Unlike a one-time export, a subscription feed updates automatically as events are added, changed, or removed in Roadcase.
 
-## How iCal feeds work
+## How it works
 
-An iCal feed is a URL that your calendar app polls periodically to fetch the latest events. When events are created, updated, or deleted in Roadcase, the feed reflects those changes the next time your calendar app refreshes.
+Each artist in Roadcase has a unique iCal feed URL secured by a private token. When you subscribe to this URL from an external calendar app, it pulls your events and keeps them in sync. The feed includes events from the past three months through the next twelve months, covering your recent history and upcoming schedule.
 
-<Note>
-  iCal feeds are **read-only**. Changes you make in your calendar app (moving an event, editing a title) are not sent back to Roadcase. For two-way sync, see [Google Calendar sync](/integrations/google-calendar-sync).
-</Note>
+Subscribed events appear alongside your personal calendar entries, giving you a unified view of everything on your plate without leaving your preferred calendar app.
 
-## Setting up a feed
+## Subscribing to a feed
 
 <Steps>
-  <Step title="Open the sync dialog">
-    On the calendar page, click the **Sync** button in the toolbar.
+  <Step title="Open the subscribe dialog">
+    On the calendar page, click the **Subscribe** button in the toolbar.
   </Step>
-  <Step title="Copy the iCal feed URL">
-    Locate the iCal feed section and copy the feed URL for the artist you want to subscribe to.
+  <Step title="Copy the feed URL">
+    Roadcase displays your artist's unique iCal feed URL. Copy it to your clipboard.
   </Step>
   <Step title="Add to your calendar app">
-    In your calendar application, add a new calendar subscription using the copied URL. Most apps have an option like "Subscribe to calendar" or "Add by URL."
+    In your calendar app, look for an option to subscribe to a calendar by URL. Paste the feed URL and confirm. The app will fetch your events and begin syncing.
   </Step>
 </Steps>
 
@@ -37,21 +35,29 @@ An iCal feed is a URL that your calendar app polls periodically to fetch the lat
 | **Google Calendar** | Other calendars > From URL > paste URL |
 | **Thunderbird** | New Calendar > On the Network > paste URL |
 
-## Feed contents
+<Note>
+  iCal feeds are read-only. Events flow from Roadcase to your calendar app, but changes made in the external app are not written back to Roadcase. To edit events, use Roadcase directly or set up [Google Calendar sync](/integrations/google-calendar-sync) for two-way sync.
+</Note>
 
-The iCal feed includes all event types for the selected artist — shows, rehearsals, meetings, travel, lodging, and more. Each event in the feed contains:
+## Per-artist feeds
 
-- Event title
-- Date and time (or all-day flag)
-- Location (venue name and address, when available)
-- Event type
+Each artist you belong to has its own independent iCal feed with a separate URL and token. If you manage multiple artists, you can subscribe to each one individually. This keeps each artist's events in a distinct calendar within your app, making it easy to toggle visibility per artist.
 
-## Refresh interval
+## What the feed includes
 
-How often your calendar app refreshes the feed depends on the app. Most apps poll every 15 minutes to a few hours. You cannot control this from Roadcase — it is determined by your calendar application's settings.
+Every event on the artist's calendar is included in the feed:
+
+- Shows, with venue name and location
+- Travel, meetings, interviews, rehearsals, and other event types
+- All-day events and timed events
+- Event titles and type descriptions
+
+## Auto-updating
+
+Most calendar apps refresh iCal subscriptions on a schedule — typically every few minutes to a few hours. The exact refresh interval depends on your calendar app's settings. When the app refreshes, it picks up any events that were created, updated, or deleted in Roadcase since the last sync.
 
 <Tip>
-  If you need faster updates, some calendar apps let you manually force a refresh. In Apple Calendar, for example, you can adjust the refresh interval in Preferences > Accounts.
+  If you need faster updates than your calendar app provides by default, check its settings for a refresh interval option. Apple Calendar, for example, lets you choose between daily, hourly, or every five minutes.
 </Tip>
 
 ## iCal feeds vs. Google Calendar sync
@@ -66,6 +72,6 @@ How often your calendar app refreshes the feed depends on the app. Most apps pol
 
 Choose iCal feeds when you use a calendar app other than Google Calendar, or when you simply want a low-maintenance subscription. Choose [Google Calendar sync](/integrations/google-calendar-sync) when you want near real-time updates and the ability to make changes from Google Calendar.
 
-## Security
+## Regenerating your feed token
 
-Each iCal feed URL contains a unique token tied to your account. Do not share this URL with others, as anyone with the URL can see your events. If you believe your feed URL has been compromised, you can regenerate it from the sync dialog, which invalidates the old URL.
+If your feed URL is compromised or you want to revoke access, you can regenerate the token from the subscribe dialog. The old URL stops working immediately — anyone who previously subscribed using it will no longer receive updates. Copy the new URL and update your calendar app subscription.
