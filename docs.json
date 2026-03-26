@@ -27,28 +27,42 @@
               "core-concepts/artists-and-teams",
               "core-concepts/roles-and-permissions",
               "core-concepts/calendar-and-events",
+              "core-concepts/event-types",
+              "core-concepts/custom-event-types",
               "core-concepts/organizations",
-              "core-concepts/custom-event-types"
+              "core-concepts/timezones",
+              "core-concepts/weather"
             ]
           },
           {
             "group": "Tour Planning",
             "pages": [
               "tour-planning/shows",
-              "tour-planning/venues"
+              "tour-planning/venues",
+              "tour-planning/contacts",
+              "tour-planning/flights",
+              "tour-planning/lodging",
+              "tour-planning/travel",
+              "tour-planning/trips",
+              "tour-planning/holds",
+              "tour-planning/block-dates"
             ]
           },
           {
             "group": "Show Operations",
             "pages": [
               "show-operations/show-schedule",
+              "show-operations/day-sheets",
               "show-operations/deals",
               "show-operations/settlements",
+              "show-operations/per-diems",
               "show-operations/advances",
+              "show-operations/advance-sharing",
               "show-operations/stage-plots",
               "show-operations/riders",
               "show-operations/guest-lists",
-              "show-operations/event-attendance"
+              "show-operations/event-attendance",
+              "show-operations/pdf-exports"
             ]
           },
           {
@@ -64,20 +78,24 @@
               "productivity/todos",
               "productivity/projects",
               "productivity/documents",
-              "productivity/expenses"
+              "productivity/expenses",
+              "productivity/expense-categories"
             ]
           },
           {
             "group": "Marketing",
             "pages": [
-              "marketing/epk"
+              "marketing/epk",
+              "marketing/artist-branding"
             ]
           },
           {
             "group": "Integrations",
             "pages": [
               "integrations/index",
-              "integrations/google-calendar-sync"
+              "integrations/google-calendar-sync",
+              "integrations/ical-feeds",
+              "integrations/bandsintown"
             ]
           },
           {
@@ -87,7 +105,8 @@
               "account/notifications",
               "account/billing",
               "account/mobile-app",
-              "account/referrals"
+              "account/referrals",
+              "account/show-templates"
             ]
           },
           {

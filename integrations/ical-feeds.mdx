@@ -1,0 +1,71 @@
+---
+title: iCal feeds
+description: Subscribe to your Roadcase calendar from any app that supports iCal feeds.
+icon: rss
+---
+
+Roadcase provides iCal calendar feeds that let you subscribe to your events from any calendar application that supports the iCal standard — Apple Calendar, Outlook, Google Calendar, and many others. This gives you a read-only view of your Roadcase events alongside your personal calendar.
+
+## How iCal feeds work
+
+An iCal feed is a URL that your calendar app polls periodically to fetch the latest events. When events are created, updated, or deleted in Roadcase, the feed reflects those changes the next time your calendar app refreshes.
+
+<Note>
+  iCal feeds are **read-only**. Changes you make in your calendar app (moving an event, editing a title) are not sent back to Roadcase. For two-way sync, see [Google Calendar sync](/integrations/google-calendar-sync).
+</Note>
+
+## Setting up a feed
+
+<Steps>
+  <Step title="Open the sync dialog">
+    On the calendar page, click the **Sync** button in the toolbar.
+  </Step>
+  <Step title="Copy the iCal feed URL">
+    Locate the iCal feed section and copy the feed URL for the artist you want to subscribe to.
+  </Step>
+  <Step title="Add to your calendar app">
+    In your calendar application, add a new calendar subscription using the copied URL. Most apps have an option like "Subscribe to calendar" or "Add by URL."
+  </Step>
+</Steps>
+
+### Adding to common calendar apps
+
+| App | How to subscribe |
+|---|---|
+| **Apple Calendar** | File > New Calendar Subscription > paste URL |
+| **Outlook** | Add calendar > Subscribe from web > paste URL |
+| **Google Calendar** | Other calendars > From URL > paste URL |
+| **Thunderbird** | New Calendar > On the Network > paste URL |
+
+## Feed contents
+
+The iCal feed includes all event types for the selected artist — shows, rehearsals, meetings, travel, lodging, and more. Each event in the feed contains:
+
+- Event title
+- Date and time (or all-day flag)
+- Location (venue name and address, when available)
+- Event type
+
+## Refresh interval
+
+How often your calendar app refreshes the feed depends on the app. Most apps poll every 15 minutes to a few hours. You cannot control this from Roadcase — it is determined by your calendar application's settings.
+
+<Tip>
+  If you need faster updates, some calendar apps let you manually force a refresh. In Apple Calendar, for example, you can adjust the refresh interval in Preferences > Accounts.
+</Tip>
+
+## iCal feeds vs. Google Calendar sync
+
+| Feature | iCal feed | Google Calendar sync |
+|---|---|---|
+| **Direction** | One-way (Roadcase to calendar) | Two-way for admins |
+| **Setup** | Copy a URL into any calendar app | OAuth connection with Google |
+| **Speed** | Depends on app refresh interval | Near real-time |
+| **Event type filtering** | All events included | Choose which event types to sync |
+| **Calendar app support** | Any app with iCal support | Google Calendar only |
+
+Choose iCal feeds when you use a calendar app other than Google Calendar, or when you simply want a low-maintenance subscription. Choose [Google Calendar sync](/integrations/google-calendar-sync) when you want near real-time updates and the ability to make changes from Google Calendar.
+
+## Security
+
+Each iCal feed URL contains a unique token tied to your account. Do not share this URL with others, as anyone with the URL can see your events. If you believe your feed URL has been compromised, you can regenerate it from the sync dialog, which invalidates the old URL.
